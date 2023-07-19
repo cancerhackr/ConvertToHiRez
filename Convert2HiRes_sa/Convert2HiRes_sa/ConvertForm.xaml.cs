@@ -102,7 +102,6 @@ namespace Convert2HiRes_sa
                 Structure s = _structureSet.Structures.FirstOrDefault(str => str.Id == item.ToString());
                 if (s.IsHighResolution)
                 {
-                    
                     continue;
                 }
                 if (s != null && s.Volume < Threshold)
