@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x64</Platform>
-    <ProjectGuid>1f290240-32e9-4ad5-8a2f-5bb74c66c1f0</ProjectGuid>
+    <ProjectGuid>{1F290240-32E9-4AD5-8A2F-5BB74C66C1F0}</ProjectGuid>
     <OutputType>library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Convert2HiRes</RootNamespace>
-    <AssemblyName>Convert2HiRes.esapi</AssemblyName>
+    <AssemblyName>Convert2HiRes_v1.0.esapi</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -17,7 +17,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>..\..\plugins</OutputPath>
+    <OutputPath>..\..\..\plugins\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -26,12 +26,18 @@
     <PlatformTarget>x64</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>..\..\plugins</OutputPath>
+    <OutputPath>T:\Linacs\ESAPI\Development and QA\plugins\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CustomAttribs_v1.0">
+      <HintPath>T:\Linacs\ESAPI\CustomAttribs\CustomAttribs_v1.0.dll</HintPath>
+    </Reference>
+    <Reference Include="ScriptTelemetry_v1.2">
+      <HintPath>T:\Linacs\ESAPI\ScriptTelemetry\Telemetry v1.2\ScriptTelemetry_v1.2.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -56,6 +62,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Convert2HiRes.cs" />
+    <Compile Include="ConvertForm.xaml.cs">
+      <DependentUpon>ConvertForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LabeledTextBox.xaml.cs">
+      <DependentUpon>LabeledTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WorkClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ConvertForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LabeledTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\banner.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

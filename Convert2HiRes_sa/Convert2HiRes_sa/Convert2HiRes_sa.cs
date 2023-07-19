@@ -153,6 +153,7 @@ namespace Convert2HiRes_sa
                     _telemetry.Error = new Exception("No patient/structure-set loaded.");
                     return;
                 }
+                _telemetry.Notes = $"StructureSet ID: {context.StructureSet.Id}";
 
                 context.Patient.BeginModifications();
 

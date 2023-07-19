@@ -1,0 +1,22 @@
+<UserControl x:Class="LRCPSoftware.WPFControls.LabeledTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LRCPSoftware.WPFControls"
+             mc:Ignorable="d" Background="White">
+    <Border BorderBrush="PowderBlue" BorderThickness="2" CornerRadius="10" Padding="5,1,7,1">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="lbl" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" VerticalAlignment="Center">
+                <Label.Content>
+                    <TextBlock Margin="5,0,5,0" HorizontalAlignment="Right" Padding="0,0,30,0">Content</TextBlock>
+                </Label.Content>
+            </Label>
+            <TextBox x:Name="txt" Grid.Column="1" MinWidth="200" Margin="5" BorderThickness="0" Background="AntiqueWhite"/>
+        </Grid>
+    </Border>
+</UserControl>
