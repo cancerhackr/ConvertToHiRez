@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApprovalHistoryComparer.cs" />
     <Compile Include="Convert2HiRes.cs" />
     <Compile Include="ConvertForm.xaml.cs">
       <DependentUpon>ConvertForm.xaml</DependentUpon>

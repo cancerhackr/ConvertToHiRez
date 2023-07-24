@@ -22,8 +22,8 @@ using System.Net;
 [assembly: AssemblyTitle("Convert to High Res v1.0")]
 [assembly: AssemblyDescription("Convert small structures (volume < 100 cc) to high resolution.")]
 [assembly: AssemblyAuthorship("Jeff Kempe", "")]
-[assembly: AssemblyQA("")]
-[assembly: AssemblyDeveloperLead("Jeff Kempe", "")]
+[assembly: AssemblyQA("Jonatan Snir")]
+[assembly: AssemblyDeveloperLead("Jeff Kempe", "2023-07-21")]
 [assembly: AssemblyManager("Stewart Gaede", "")]
 [assembly: AssemblyKeywords("Structures;convert;high res;high resolution")]
 

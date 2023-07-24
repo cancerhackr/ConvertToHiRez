@@ -1,5 +1,7 @@
+using System;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using System.Windows.Media;
 
 namespace LRCPSoftware.WPFControls
@@ -12,7 +14,25 @@ namespace LRCPSoftware.WPFControls
         public LabeledTextBox()
         {
             InitializeComponent();
+            txt.PreviewTextInput += Txt_PreviewTextInput;
+            txt.LostFocus += Txt_LostFocus;
         }
+
+        #region Event Handlers
+
+        private void Txt_LostFocus(object sender, RoutedEventArgs e) => LostFocus?.Invoke(this, e);
+        private void Txt_PreviewTextInput(object sender, TextCompositionEventArgs e) => PreviewTextInput?.Invoke(this, e);
+
+        #endregion
+
+        #region Events
+
+        public new event TextCompositionEventHandler PreviewTextInput;
+        public new event EventHandler LostFocus;
+
+        #endregion
+
+        #region Properties
 
         public FontFamily LabelFontFamily
         {
@@ -85,5 +105,8 @@ namespace LRCPSoftware.WPFControls
             get => txt.Padding;
             set => txt.Padding = value;
         }
+
+        #endregion
+
     }
 }

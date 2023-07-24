@@ -49,7 +49,7 @@
                             <TextBlock x:Name="txtPatient" Text="PatientID - StructureSetID"/>
                         </Label>
                     </Border>
-                    <uc:LabeledTextBox x:Name="txtThreshold" Margin="10,5,10,5" LabelPadding="0,0,30,0" LabelFontFamily="Sitka Banner" LabelFontSize="20" LabelFontWeight="Bold" LabelText="Threshold (cc):" TextFontSize="20"/>
+                    <uc:LabeledTextBox x:Name="txtThreshold" Margin="10,5,10,5" LabelPadding="0,0,30,0" LabelFontFamily="Sitka Banner" LabelFontSize="20" LabelFontWeight="Bold" LabelText="Threshold (cc):" TextFontSize="20" PreviewTextInput="TxtThreshold_PreviewTextInput"/>
                 </StackPanel>
             </Border>
             <Image x:Name="banner" Grid.Row="1" Source="pack://application:,,,/Resources/banner.png" Width="Auto" Height="Auto" HorizontalAlignment="Center" VerticalAlignment="Stretch" Margin="10"/>

@@ -20,7 +20,7 @@ using User = Context.User;
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: AssemblyInformationalVersion("1.0")]
 
-[assembly: AssemblyType(ASSEMBLYTYPES.PLUGIN)]
+[assembly: AssemblyType(ASSEMBLYTYPES.STANDALONE)]
 [assembly: AssemblyTitle("Convert to High Res v1.0")]
 [assembly: AssemblyDescription("Convert small structures (volume < 100 cc) to high resolution.")]
 [assembly: AssemblyAuthorship("Jeff Kempe", "")]
@@ -107,6 +107,8 @@ namespace Convert2HiRes_sa
             #region Setup for debugging
 
             EsapiDebugSetupClass.RegisterContextFactory(ScriptContext.CreateContext);
+            //EsapiDebugSetupClass.PatientID = "ESAPI_Rename_Test";
+            //EsapiDebugSetupClass.PatientID = "Z_ESAPI_convert2HiRes";
             EsapiDebugSetupClass.PatientID = "ESAPI_Rename_Test";
             EsapiDebugSetupClass.CourseID = "";
             EsapiDebugSetupClass.PlanID = "";
